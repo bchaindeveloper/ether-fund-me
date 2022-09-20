@@ -8,7 +8,7 @@ const balanceButton = document.getElementById("balanceButton")
 connectButton.onclick = connect
 // withdrawButton.onclick = withdraw
 fundButton.onclick = fund
-// balanceButton.onclick = getBalance
+balanceButton.onclick = getBalance
 
 async function connect() {
     if (typeof window.ethereum !== "undefined") {
@@ -64,19 +64,19 @@ async function fund() {
     }
 }
 
-// async function getBalance() {
-//     if (typeof window.ethereum !== "undefined") {
-//         const provider = new ethers.providers.Web3Provider(window.ethereum)
-//         try {
-//             const balance = await provider.getBalance(contractAddress)
-//             console.log(ethers.utils.formatEther(balance))
-//         } catch (error) {
-//             console.log(error)
-//         }
-//     } else {
-//         balanceButton.innerHTML = "Please install MetaMask"
-//     }
-// }
+async function getBalance() {
+    if (typeof window.ethereum !== "undefined") {
+        const provider = new ethers.providers.Web3Provider(window.ethereum)
+        try {
+            const balance = await provider.getBalance(contractAddress)
+            console.log(ethers.utils.formatEther(balance))
+        } catch (error) {
+            console.log(error)
+        }
+    } else {
+        balanceButton.innerHTML = "Please install MetaMask"
+    }
+}
 
 function listenForTransactionMine(transactionResponse, provider) {
     console.log(`Mining ${transactionResponse.hash}`)
