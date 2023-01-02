@@ -2,7 +2,31 @@
 
 This project uses HTML and Javascript to create a front end for my hardhat-fund-me contract. The UI is a simple interface with connect, get balance, fund and withdrawl buttons. 
 
-Part of Patrick Collins:
-Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript – 32-Hour Course
-Lesson 8: HTML / Javascript Fund Me (Full Stack / Front End)
-https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=45177s
+## Built with:
+
+![Screenshot](Screenshot1.png)
+
+Ethers,
+Solidity,
+JavaScript
+
+## How to use:
+
+```
+Download/Extract or clone
+cd ether-fund-me
+yarn
+yarn http-server
+```
+
+## Contribute:
+
+Feel free to a fork this repo and contact me for any reason.
+
+## Credit:
+
+FreeCodeCamp - https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=59325s
+
+## License:
+
+MIT © BChainDev
